@@ -80,6 +80,7 @@ void print(int A[],int heap_size)
 void HeapSort(int A[], int heap_size)
 {
     Build_Max_Heap(A, heap_size);
+    print(A, heap_size);
     int temp;
     for(int i = heap_size - 1; i >= 0; i--)
     {
@@ -88,7 +89,6 @@ void HeapSort(int A[], int heap_size)
         A[i] = temp;
         Max_Heapify(A, 0, i);
     }
-    print(A, heap_size);
 }
  
 /*..........*/
